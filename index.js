@@ -13,7 +13,6 @@ program.parse();
 
 const options = program.opts();
 
-// TODO: рефакторити
 async function invokeAction({ action, id, name, email, phone }) {
       switch (action) {
           case "list":
@@ -36,7 +35,6 @@ async function invokeAction({ action, id, name, email, phone }) {
           default:
               console.warn("\x1B[31m Unknown action type!");
       }
-
 }
 
 invokeAction(options);
